@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "nombres": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "apellidos": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "identificacion": {
+      "type": "string",
+      "pattern": "^(?!.*?(\\d)\\1{3})\\d{10}$"
+    },
+    "fecha_nacimiento": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": ["nombres", "apellidos", "identificacion", "fecha_nacimiento"]
+}
